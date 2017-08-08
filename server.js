@@ -10,7 +10,7 @@ var port = 9000;
 
 
 var app = express();
-app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static(path.join(__dirname, 'client/dist')));
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 
@@ -22,7 +22,7 @@ app.use('/api', api);
 app.get('*', (req, res, next) => {
     console.log(__dirname);
     // res.json("asdasd");
-    res.sendFile(path.join(__dirname, 'dist/index.html'));
+    res.sendFile(path.join(__dirname, 'client/dist/index.html'));
 
 });
 // app.get('/', function(req, res) {

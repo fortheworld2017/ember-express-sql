@@ -8,10 +8,10 @@ var con = mysql.createConnection({
     password: "pco82493"
 });
 
-con.connect(function(err) {
-    if (err) throw err;
-    console.log("Connected!");
-});
+// con.connect(function(err) {
+//     if (err) throw err;
+//     console.log("Connected!");
+// });
 
 
 router.get('/videos', function(req, res, next) {
