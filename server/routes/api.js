@@ -1,6 +1,17 @@
 var express = require('express');
+var mysql = require('mysql');
 var router = express.Router();
 
+var con = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "pco82493"
+});
+
+con.connect(function(err) {
+    if (err) throw err;
+    console.log("Connected!");
+});
 
 
 router.get('/videos', function(req, res, next) {
